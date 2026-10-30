@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Demo</title>
+</head>
+<body>
+  <header>
+    <h1>Student Registration Demo</h1>
+    <p>Practice only. Do not enter real sensitive data.</p>
+  </header>
+
+  <main>
+    <form action="#" method="get">
+      <p>
+        <label for="full-name">Full name</label>
+        <input id="full-name" name="fullName" type="text"
+               minlength="2" required>
+      </p>
+
+      <p>
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" required>
+      </p>
+
+      <p>
+        <label for="age">Age</label>
+        <input id="age" name="age" type="number"
+               min="16" max="100" required>
+      </p>
+
+      <p>
+        <label for="course">Course</label>
+        <select id="course" name="course" required>
+          <option value="">Choose a course</option>
+          <option value="bca">BCA</option>
+          <option value="mca">MCA</option>
+          <option value="btech">B.Tech</option>
+        </select>
+      </p>
+
+      <fieldset>
+        <legend>Study mode</legend>
+
+        <input id="online" name="mode" type="radio"
+               value="online" required>
+        <label for="online">Online</label>
+
+        <input id="onsite" name="mode" type="radio"
+               value="onsite">
+        <label for="onsite">On-site</label>
+      </fieldset>
+
+      <p>
+        <label for="goals">Learning goals</label>
+        <textarea id="goals" name="goals" rows="4"></textarea>
+      </p>
+
+      <p>
+        <input id="practice" name="practice"
+               type="checkbox" required>
+        <label for="practice">
+          I confirm this is practice data.
+        </label>
+      </p>
+
+      <button type="submit">Submit demo</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Tech Fellows | Day 05 — HTML Forms &amp; Inputs</p>
+  </footer>
+</body>
+</html>
