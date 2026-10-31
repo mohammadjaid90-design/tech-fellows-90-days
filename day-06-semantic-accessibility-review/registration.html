@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Registration Form</h1>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Registration Details</h2>
+
+            <p>Please fill in all required fields.</p>
+
+            <form action="#" method="post">
+
+                <!-- Name -->
+                <div>
+                    <label for="full-name">Full Name:</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="full-name"
+                        required
+                    >
+                </div>
+
+                <br>
+
+                <!-- Email -->
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+                </div>
+
+                <br>
+
+                <!-- Password -->
+                <div>
+                    <label for="password">Password:</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                    >
+                </div>
+
+                <br>
+
+                <!-- Gender -->
+                <fieldset>
+                    <legend>Select Gender:</legend>
+
+                    <input
+                        type="radio"
+                        id="male"
+                        name="gender"
+                        value="male"
+                    >
+                    <label for="male">Male</label>
+
+                    <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="female"
+                    >
+                    <label for="female">Female</label>
+                </fieldset>
+
+                <br>
+
+                <!-- Course -->
+                <div>
+                    <label for="course">Select Course:</label>
+
+                    <select id="course" name="course" required>
+                        <option value="">Choose a course</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <!-- Message -->
+                <div>
+                    <label for="message">Your Message:</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        cols="30"
+                    ></textarea>
+                </div>
+
+                <br>
+
+                <!-- Consent -->
+                <div>
+                    <input
+                        type="checkbox"
+                        id="consent"
+                        name="consent"
+                        required
+                    >
+
+                    <label for="consent">
+                        I agree to the terms and conditions.
+                    </label>
+                </div>
+
+                <br>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Registration</p>
+    </footer>
+
+</body>
+</html>
