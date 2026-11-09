@@ -206,3 +206,18 @@ body.dark .card {
         padding: 15px 5%;
     }
 }
+/* Dark Mode */
+body.dark {
+    background: #111827;
+    color: white;
+}
+
+body.dark .card {
+    background: #1f2937;
+    color: white;
+}
+
+body.dark section {
+    background-color: #111827;
+    color: white;
+}
