@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12 - CSS Typography</title>
+
+    <!-- Google Fonts links go before our CSS file. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Day 12: CSS Typography</h1>
+        <p>Learning fonts, units, text properties and readable layouts.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Task 1: Font Stacks</h2>
+            <p class="sans-example">This paragraph uses a sans-serif font stack. It looks clean and simple.</p>
+            <p class="serif-example">This paragraph uses a serif font stack. It has small strokes on the letters.</p>
+            <p class="mono-example">This paragraph uses a monospace font stack. Every character takes equal space.</p>
+        </section>
+
+        <section>
+            <h2>Task 2: Google Fonts and Variables</h2>
+            <h3 class="font-demo">This heading uses Poppins</h3>
+            <p>This paragraph uses Inter as the body font.</p>
+            <p class="small-note">To check: right-click this text, choose Inspect, open Computed and find Rendered Fonts.</p>
+        </section>
+
+        <section>
+            <h2>Task 3: Units - em and rem</h2>
+            <div class="unit-parent">
+                <p class="em-example">This paragraph uses 1.5em (expected: 30px).</p>
+                <p class="rem-example">This paragraph uses 1.5rem (expected: 24px when root is 16px).</p>
+                <div class="nested-em">
+                    <p>This paragraph is nested with 1.5em again (expected: 45px).</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Task 4: Type Scale and Readability</h2>
+            <div class="type-scale">
+                <h1>Heading One</h1>
+                <h2>Heading Two</h2>
+                <h3>Heading Three</h3>
+                <h4>Heading Four</h4>
+                <p>Good typography makes a website easier to read. A clear heading size helps people understand the page and find the information they need. Paragraphs should have enough space between lines so that reading does not feel difficult.</p>
+                <p>For a beginner website, it is better to use a small number of fonts and keep the text size consistent. A paragraph should not stretch across the full screen because very long lines are harder to follow. A maximum width of about 65 characters is a useful starting point.</p>
+                <p>Line height also makes a difference. A value such as 1.6 gives the text comfortable spacing. If line-height is set to 1.6px, the lines become too close together and the text is difficult to read.</p>
+                <p class="bad-line-height">This short paragraph demonstrates the incorrect line-height: 1.6px. The lines are squeezed together. Remove the bad-line-height class to restore normal spacing.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Task 5: Text Properties</h2>
+            <div class="text-card">
+                <h3 class="card-title">Typography Card</h3>
+                <p class="subtitle">A small example of text styling</p>
+                <p class="indented">This first paragraph has a text indent. It starts a little further from the left side of the card.</p>
+                <p class="weight-300">Font weight 300 - Light</p>
+                <p class="weight-400">Font weight 400 - Regular</p>
+                <p class="weight-600">Font weight 600 - Semi-bold</p>
+                <p class="weight-700">Font weight 700 - Bold</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Task 6: Link States</h2>
+            <p class="small-note">The first link uses the wrong order for practice. The second group uses the correct order.</p>
+            <h3>Wrong order example</h3>
+            <p><a class="wrong-link" href="https://example.com/day12-link-one">Example link one</a></p>
+            <h3>Correct order example</h3>
+            <p><a class="good-link" href="https://example.com/day12-link-two">Example link two</a></p>
+            <p><a class="good-link" href="https://example.com/day12-link-three">Example link three</a></p>
+        </section>
+
+        <section>
+            <h2>Task 7: Form Typography</h2>
+            <form>
+                <label for="student-name">Your name</label>
+                <input type="text" id="student-name" placeholder="Enter your name">
+
+                <label for="student-message">Your message</label>
+                <textarea id="student-message" rows="4" placeholder="Write a short message"></textarea>
+
+                <label for="course">Choose a course</label>
+                <select id="course">
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                </select>
+
+                <button type="button">Submit</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Task 8: Debug Challenge - Corrected</h2>
+            <p class="debug-example">This paragraph uses the corrected typography settings.</p>
+            <p class="small-note">All seven corrections are listed in comments in css/style.css.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Day 12 CSS Typography Practice</p>
+    </footer>
+</body>
+</html>
