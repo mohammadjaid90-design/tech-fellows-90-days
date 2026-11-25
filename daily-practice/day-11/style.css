@@ -1,0 +1,278 @@
+/* =====================================================
+   DAY 11: CASCADE, SPECIFICITY, INHERITANCE AND COLORS
+   Beginner practice file
+===================================================== */
+
+
+/* TASK 1: INHERITANCE
+   Answer: color and font-family are inherited by children.
+   Border is NOT inherited by child elements. */
+body {
+    color: #333;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    border: 2px solid #333;
+    padding: 20px;
+}
+
+/* Answer: The link uses the same color as its paragraph. */
+a {
+    color: inherit;
+}
+
+
+/* TASK 2: SPECIFICITY BATTLE
+   First test:
+   p = red, .note = blue, #msg = green.
+   Expected result: GREEN because an ID selector is stronger. */
+p {
+    color: red;          /* Specificity: 0,0,0,1 */
+}
+
+.note {
+    color: blue;         /* Specificity: 0,0,1,0 */
+}
+
+#msg {
+    color: green;        /* Specificity: 0,1,0,0 - wins */
+}
+
+/* Second test:
+   p.note has more specificity than .note, but #msg is still stronger.
+   Expected result remains GREEN. */
+p.note {
+    color: purple;       /* Specificity: 0,0,1,1 */
+}
+
+/* Third test:
+   BLUE wins because !important beats normal declarations.
+   Remove this declaration to see the ID selector win again. */
+.note {
+    color: blue !important;
+}
+
+
+/* TASK 3: SOURCE ORDER
+   Both .box selectors have equal specificity.
+   The later rule wins, so the box is BLUE.
+   Swap the two background-color values to test it. */
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.box {
+    background-color: blue;
+}
+
+
+/* TASK 4: COLOR FORMATS
+   All six boxes represent blue in different CSS formats.
+   RGBA uses alpha 0.5, which means 50% transparency. */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.color-box {
+    min-height: 90px;
+    padding: 12px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.named {
+    background-color: blue;
+}
+
+.hex {
+    background-color: #0000ff;
+}
+
+.short-hex {
+    background-color: #00f;
+}
+
+.rgb {
+    background-color: rgb(0, 0, 255);
+}
+
+.rgba {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+.hsl {
+    background-color: hsl(240, 100%, 50%);
+}
+
+
+/* TASK 5: HSL SHADES
+   Hue = 210 and saturation = 60% stay the same.
+   Only lightness changes to create five shades. */
+.shade-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.shade {
+    min-height: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.shade-20 {
+    background-color: hsl(210, 60%, 20%);
+    color: white;
+}
+
+.shade-35 {
+    background-color: hsl(210, 60%, 35%);
+    color: white;
+}
+
+.shade-50 {
+    background-color: hsl(210, 60%, 50%);
+    color: white;
+}
+
+.shade-65 {
+    background-color: hsl(210, 60%, 65%);
+    color: #111;
+}
+
+.shade-80 {
+    background-color: hsl(210, 60%, 80%);
+    color: #111;
+}
+
+
+/* TASK 6: TRANSPARENCY
+   rgba() makes only the background color transparent.
+   opacity makes the whole element, including text, transparent. */
+.background-area {
+    background-color: #f0a34a;
+    padding: 25px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.rgba-card,
+.opacity-card {
+    background-color: white;
+    padding: 15px;
+    width: 220px;
+}
+
+.rgba-card {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.opacity-card {
+    opacity: 0.5;
+}
+
+
+/* TASK 7: CSS VARIABLES
+   Variables are created in :root and reused with var().
+   Change --primary only to update the heading and button. */
+:root {
+    --primary: #1f4e79;
+    --accent: #ff7a00;
+    --bg: #f5f7fa;
+    --text: #1f2937;
+}
+
+.theme-heading {
+    color: var(--primary);
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--accent);
+}
+
+
+/* TASK 8: DEBUG CHALLENGE
+   Mistake 1: highlight needed a dot because it is a class.
+   Mistake 2: #ffff0 was invalid (only 5 hex digits); use #ffff00.
+   Mistake 3: 'colour' was incorrect; CSS uses 'color'.
+   Mistake 4: a semicolon was missing after darkblue.
+   Mistake 5: RGB value 300 was outside the allowed 0-255 range.
+   Mistake 6: 'centre' was incorrect; use 'center'. */
+.highlight {
+    background-color: #ffff00;
+    color: darkblue;
+    font-size: 20px;
+}
+
+#title {
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+
+
+/* EXTRA PAGE DESIGN */
+header {
+    background: linear-gradient(to right, #1f4e79, #2e86c1);
+    color: white;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+header .intro {
+    color: white;
+}
+
+section {
+    background-color: white;
+    margin: 18px 0;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.small-note {
+    font-size: 13px;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 12px;
+}
+
+/* Responsive layout for smaller screens. */
+@media (max-width: 700px) {
+    .color-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shade-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
