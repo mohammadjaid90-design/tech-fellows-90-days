@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11 - CSS Practice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1 id="title">Day 11: CSS Practice</h1>
+        <p class="intro">Cascade, Specificity, Inheritance and Colors</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Task 1: Inheritance</h2>
+            <p>This is the first paragraph.</p>
+            <p>This is the second paragraph with a <a href="#">sample link</a>.</p>
+            <p>This is the third paragraph.</p>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Task 2: Specificity Battle</h2>
+            <p id="msg" class="note">Hello</p>
+            <p class="small-note">Open the CSS file and remove the !important line to test the earlier steps.</p>
+        </section>
+
+        <section>
+            <h2>Task 3: Source Order</h2>
+            <div class="box">My Box</div>
+            <p class="small-note">Swap the two .box background-color rules in style.css to test source order.</p>
+        </section>
+
+        <section>
+            <h2>Task 4: Color Formats</h2>
+            <div class="color-grid">
+                <div class="color-box named">Named: blue</div>
+                <div class="color-box hex">HEX: #0000ff</div>
+                <div class="color-box short-hex">3-digit HEX: #00f</div>
+                <div class="color-box rgb">RGB: rgb(0, 0, 255)</div>
+                <div class="color-box rgba">RGBA: 50% transparent</div>
+                <div class="color-box hsl">HSL: hsl(240, 100%, 50%)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Task 5: HSL Shades</h2>
+            <div class="shade-grid">
+                <div class="shade shade-20">Lightness: 20%</div>
+                <div class="shade shade-35">Lightness: 35%</div>
+                <div class="shade shade-50">Lightness: 50%</div>
+                <div class="shade shade-65">Lightness: 65%</div>
+                <div class="shade shade-80">Lightness: 80%</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Task 6: Transparency</h2>
+            <div class="background-area">
+                <div class="rgba-card">
+                    <h3>RGBA Example</h3>
+                    <p>The background is transparent, but this text stays clear.</p>
+                </div>
+                <div class="opacity-card">
+                    <h3>Opacity Example</h3>
+                    <p>This text also becomes transparent.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Task 7: CSS Variables</h2>
+            <h3 class="theme-heading">My CSS Theme</h3>
+            <p>This page uses CSS variables for its colors.</p>
+            <button type="button">Click Me</button>
+            <p class="small-note">Change only --primary inside :root in style.css and see the heading and button update.</p>
+        </section>
+
+        <section>
+            <h2>Task 8: Debug Challenge - Corrected</h2>
+            <p class="highlight">Course</p>
+            <p class="small-note">The mistakes and corrections are explained in comments in style.css.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Day 11 CSS Daily Practice</p>
+    </footer>
+
+</body>
+</html>
